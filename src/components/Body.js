@@ -6,6 +6,7 @@ import {
   NAMASTE_REACT_BASE_URL,
   RESTAUARANT_ENDPOINT,
 } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // Normal JS var
@@ -94,7 +95,9 @@ const Body = () => {
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => {
           return (
-            <RestaurantCard key={restaurant.info.id} restaurant={restaurant} />
+            <Link key={restaurant.info.id} to={`/restaurant/${restaurant.info.id}`}>
+            <RestaurantCard  restaurant={restaurant} />
+            </Link>
           );
         })}
       </div>
