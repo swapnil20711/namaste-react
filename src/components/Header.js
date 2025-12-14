@@ -8,7 +8,7 @@ const Header = () => {
   // if dependency array is empty then it will be called once
   // if dep array is having [btnName] this will be called when btnName changes
   useEffect(() => {
-    console.log("useEffect called");
+    // console.log("useEffect called");
   }, [btnName]);
   return (
     <div className="header">
